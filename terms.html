@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<!-- Mirrored from printathing.com/terms.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 03:01:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>
+        if (document.cookie.indexOf('patRID') < 0) {
+                        randomId = Math.floor(Math.random() * Math.pow(2,32));
+            var d = new Date();
+            d.setTime(d.getTime()+(720*24*60*60*1000));
+            document.cookie = 'patRID='+randomId+'; expires='+ d.toUTCString();
+        }
+    </script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-51146623-1', 'printathing.com');
+    
+        try {
+        var source = new URLSearchParams(window.location.search).get('source');
+        if (source) {
+            ga('set', 'campaignSource', source);
+        }
+    } catch (exception) { }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    randomId = getCookie('patRID');
+
+        ga('set', 'dimension1', 'thingiverse_link=_no,dummy_test=_a,3d_preview=_yes,maker_image=_guyCheckeredShirt,maker_num_materials=_18,maker_garuntee=_supplierImprove,maker_ease=_yes,maker_value=_yes,maker_call_to_action_color=_green,maker_call_to_action_text=startYour3DPrint,maker_trust_logo=_yes,maker_top_navigation=no,maker_testimonials=no,maker_how_works=no,maker_featured_by=no,royalty_hero_image=designersTeam,royalty_top_navigation=_yes,royalty_hey_designers_headline=designShareProfit,royalty_cta_text=_startEarning,royalty_price_slide_2=minimal,turn_around_max_days=_14,maker_image_same_day_test=_clockFrontCloseHand,maker_headline_and_subtext_not_same_day=_best3DProject,maker_headline_same_day=iterateQuickly,default_material=white,maker_headline_and_subtext_two_week=whatsBettter,thingiverse_next_day_delivery=_no,kisslicer_double_time=_0,beta_logo=_yes,show_delivery_time_quote_2=_no,tv_printability_warning=yes,order_minimum=0,shipping_charge=14,config_charge=8,material_price=1.4');
+
+        ga('set', 'dimension2', '18643330552143926687');
+
+        ga('set', 'dimension4', randomId);
+
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.html');
+    ga('send', 'pageview');
+</script>
+<script>
+    function _gaLt(event) {
+        var el = event.srcElement || event.target;
+
+        /* Loop up the DOM tree through parent elements if clicked element is not a link (eg: an image inside a link) */
+        while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
+            el = el.parentNode;
+        }
+
+        if (!el || !el.href) {
+            return;
+        }
+
+        /* link */
+        var link = el.href;
+        if (link.indexOf(location.host) != -1) {
+            // Internal link
+            return;
+        }
+
+        if (link.match(/^javascript\:/i)){
+            return;
+        }
+
+        /* It's a popup if shift/ctrl/command are held or the target is _blank */
+        var popup = event.shiftKey || event.ctrlKey || event.metaKey || el.target && !el.target.match(/^_(self|parent|top)$/i);
+
+        function doClick() {
+            // Change the window location after success if not a popup
+            if (!popup) window.location.href = link;
+        }
+        ga('send', 'event', 'outbound', 'click', link, { 'hitCallback': function() {
+            doClick();
+        }});
+
+        // In case GA doesn't return, make sure the click action still happens.
+        setTimeout(doClick, 1000);
+
+        /* Prevent standard click if not a popup */
+        popup || (event.preventDefault ? event.preventDefault() : event.returnValue = !1);
+    }
+
+    /* Attach the event to all clicks in the document after page has loaded */
+    var w = window;
+    w.addEventListener ? w.addEventListener('load',function(){document.body.addEventListener('click',_gaLt,!1)},!1)
+            : w.attachEvent && w.attachEvent('onload',function(){document.body.attachEvent('onclick',_gaLt)});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics (Optimize property) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51146623-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-51146623-3', {'optimize_id': 'OPT-MGXT86T'});
+    // gtag('config', 'UA-186697821-1', {'optimize_id': 'OPT-MVZCPP6'});
+</script>
+<script>
+    (() => {
+        window.tfo = window.tfo || [];
+        window.tfo.push = n => {
+            const c = g('tfo').filter(v => !v.startsWith(n.slice(0, -1)));
+            c.push(n);
+            s('tfo', c);
+        };
+        window.tfo.forEach(window.tfo.push);
+        const g = n => (document.cookie.split(';').map(v => v.trim()).find(v => v.startsWith(`${n}=`)) || '').slice(n.length + 1).split('-').filter(v => v !== '');
+        const s = (n, v) => document.cookie = n + '=' + v.join('-') + ';path=/';
+        const m = () => {
+            const c = g('tfs');
+            return g('tfo').find(n => !c.includes(n));
+        };
+        const e = () => {
+            if (m()) {
+                fetch(`/`).then(() => {
+                    if (m()) {
+                        console.error('TFO mismatch', g('tfo'), g('tfs'));
+                        s('tfo', []);
+                    }
+                });
+            }
+        }
+        setInterval(e, 1000);
+    })();
+</script>
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+t.async=!0,t.src='../static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
+s.parentNode.insertBefore(t,s))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nvf7w');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+    <meta charset="utf-8">
+    <base >
+
+            <title ng-bind="($title ? $title + ' - ' : '') + 'Print a Thing'">
+                            Terms of Service - Print a Thing
+                    </title>
+    
+            <meta name="description" content="Print a Thing is a crowd-sourced custom 3D printing service that provides low-cost, quick-turn, and high-quality results for hobbyists, experimenters and entrepreneurs." />
+    
+            <meta name="keywords" content="3d printing service, custom 3d printing, 3d printing" />
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="bundles/patweb/css/plugins.css" />
+    <link rel="stylesheet" href="bundles/patweb/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bundles/patweb/css/fonts.css" />
+    <link rel="stylesheet" href="bundles/patweb/css/main.css" />
+    <link rel="stylesheet" href="bundles/patweb/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="bundles/patweb/css/rzslider.min.css" />
+    <link rel="stylesheet" href="../ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+                
+    <link rel="chrome-webstore-item" href="../chrome.google.com/webstore/detail/iocbnflhfijmepenegmoljbnhljifmch.html">
+    <meta name="google-site-verification" content="vJhUAhdpe1A31cFs3qzVyZ9jgDM-YUV-ryjJ6pfqiIE" />
+            <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        '../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '174968876357844');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="../www.facebook.com/tr9432.gif?id=174968876357844&amp;ev=PageView&amp;noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code --></head>
+
+<body class="web_home_terms-route ">
+            <div class="header">
+    <ul class="nav"></ul>
+</div>
+<div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="1" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Print a Thing<sup class="sup">beta</sup></a>        </div>
+        <div class="navbar-collapse collapse">
+    <div class="right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="order/index.html">
+                    <strong>
+                        Order
+                    </strong>
+                </a>
+            </li>
+            <li class="dropdown">
+                  <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    Explore 3D Printing
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                        <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="about/why/index.html">Why 3D Print?</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="help/index.html">Frequently Asked Questions</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="blog/index.html">Blog</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="print-the-thing/index.html">
+                            Chrome Extension
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="about/index.html">About Us</a>
+                    </li>
+                  </ul>
+            </li>
+                        <li>
+                    <a href="supplier/register/index.html">Supply</a>
+            </li>
+            
+            <li>
+                            <a href="about/contact/index.html">Contact</a>
+                        </li>
+
+            <!-- <li>
+                <a href="/create/">Create</a>
+            </li> -->
+                                </ul>
+        <hr class="visible-xs" />
+        <div class="navbar-right">
+                            
+                <div class="hidden-xs">
+                    <span class="toggle-buttons login-collapse collapse width in">
+                        <button
+                            data-toggle="collapse"
+                            type="button"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</button>
+                                                                                            </span>
+                    <div class="collapse width login-form login-collapse" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+                            <a class="btn btn-link"
+                            data-toggle="collapse"
+                            data-target=".login-collapse"
+                            >
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                            </a>
+                            <a
+                            class="btn btn-link"
+                            href="register/index.html">
+                                <small>Join Today</small>
+                            </a>
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="visible-xs">
+                    <div class="toggle-buttons login-collapse collapse in text-right">
+                        <a
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</a>
+                                                                                                </div>
+                    <div class="collapse login-form login-collapse text-right" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                                        <!-- <a class="btn btn-link text-danger"
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            >
+                            <small>Close</small>
+                            </a> -->
+                                        <a
+                            class="btn btn-link"
+                            href="register/index.html">
+                                <small>Join Today</small>
+                            </a>
+
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</div>
+    </div>
+</div>
+    
+            <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                                                    <div class="page-header hidden-print">
+                                    <h1>Website Terms and Conditions of Use</h1>
+ 
+                            </div>
+                        
+                                                                            
+                                            </div>
+                </div>
+
+                    <h3>1. Terms</h3>
+
+<p>
+    By accessing this website, you are agreeing to be bound by these
+        website Terms and Conditions of Use, all applicable laws and regulations,
+        and agree that you are responsible for compliance with any applicable local
+        laws. If you do not agree with any of these terms, you are prohibited from
+        using or accessing this site. The materials contained in this website are
+        protected by applicable copyright and trademark law.
+</p>
+
+<h3>2. Use License</h3>
+
+<ol type="a">
+    <li>
+        Permission is granted to temporarily download one copy of the materials
+            (information or software) on Print a Thing, LLC's website for personal,
+            non-commercial transitory viewing only. This is the grant of a license,
+            not a transfer of title, and under this license you may not:
+        <ol type="i">
+            <li>modify or copy the materials;</li>
+            <li>
+                use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
+            </li>
+            <li>
+                attempt to decompile or reverse engineer any software contained on Print a Thing, LLC's website;
+            </li>
+            <li>
+                remove any copyright or other proprietary notations from the materials; or
+            </li>
+            <li>
+                transfer the materials to another person or "mirror" the materials on any other server.
+            </li>
+        </ol>
+    </li>
+    <li>
+        This license shall automatically terminate if you violate any of these restrictions and may be terminated by Print a Thing, LLC at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+    </li>
+</ol>
+
+<h3>3. Disclaimer</h3>
+
+<ol type="a">
+    <li>
+        The materials and services on Print a Thing, LLC's website are provided "as is". Print a Thing, LLC makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, Print a Thing, LLC does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this site.
+    </li>
+</ol>
+
+<h3>4. Limitations</h3>
+
+<p>
+    In no event shall Print a Thing, LLC or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Print a Thing, LLC's Internet site, even if Print a Thing, LLC or a Print a Thing, LLC authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+</p>
+
+<p>
+    Print a Thing, LLC requires that all of its suppliers agree to respect the copyright of its customers.  In the event that a supplier breaks this agreement, that individual supplier is responsible.  Print a Thing, LLC will not be liable for any damages (including, without limitation, damages for loss of profit, or due to business interruption) due to breach of copyright by one of our suppliers.
+</p>
+
+<h3>5. Intellectual Property</h3>
+
+<p>
+    Print a Thing, LLC acknowledges that, in the course of business, certain design files ("Confidential Information") may be uploaded to its servers. Print a Thing recognizes that the confidentiality of such design files are of great importance to our customers. During the order fulfillment process, such design files must necessarily be disclosed to select suppliers. Therefore, Print a Thing, LLC requires that all of its suppliers sign an agreement to respect the copyright of its customers by:
+</p>
+<ul>
+    <li>safeguarding all design files from disclosure</li>
+    <li>deleting all design files after completing an order.</li>
+</ul>
+
+<p>
+   In the event that a supplier breaks this agreement, that individual supplier is responsible for any and all liability. Print a Thing, LLC will not be liable for any damages (including, without limitation, damages for loss of profit, or due to business interruption) due to breach of copyright by one of our suppliers.
+</p>
+
+<p>
+Notwithstanding the above disclosure to select suppliers, Print a Thing, LLC agrees to safeguard such design files against disclosure to others with the same degree of care as exercised with its own information of a similar nature.
+</p>
+
+<p>
+The term above disclosure restrictions does not include information that:
+<ol>
+    <li>Print a Thing, LLC can demonstrate by written records was previously known</li>
+    <li>Which are now, or become in the future, public knowledge other than through acts or omissions of Print a Thing, LLC</li>
+    <li>Which are lawfully obtained by Print a Thing, LLC from another, independent, source.</li>
+</ol>
+</p>
+
+<h3>6. Revisions and Errata</h3>
+
+<p>
+    The materials appearing on Print a Thing, LLC's website could include technical, typographical, or photographic errors. Print a Thing, LLC does not warrant that any of the materials on its website are accurate, complete, or current. Print a Thing, LLC may make changes to the materials contained on its website at any time without notice. Print a Thing, LLC does not, however, make any commitment to update the materials.
+</p>
+
+<h3>7. Links</h3>
+
+<p>
+    Print a Thing, LLC has not reviewed all of the sites linked to its Internet website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Print a Thing, LLC of the site. Use of any such linked website is at the user's own risk.
+</p>
+
+<h3>8. Site Terms of Use Modifications</h3>
+
+<p>
+    Print a Thing, LLC may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+</p>
+
+<h3>9. Governing Law</h3>
+
+<p>
+    Any claim relating to Print a Thing, LLC's website shall be governed by the laws of the State of Delaware without regard to its conflict of law provisions.
+</p>
+            </div>
+        </div>
+    
+            
+<footer class="footer hidden-print">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!--
+<div class="text-center">
+	<div class="panel panel-default call-widget">
+		Questions?
+		&bull;
+		1-855-55-3DPRINT (1-855-553-3774)
+		&bull;
+		M-Th 11am-Midnight CT
+                &bull;
+                F 11am-5pm CT
+	</div>
+</div>
+-->
+                <ul class="nav nav-pills footer-nav">
+                    <li>
+                        <a href="about/index.html" target="_self">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html" target="_self">Terms of Service</a>
+                    </li>
+
+                    <li>
+                        <a href="privacy.html" target="_self">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="about/contact/index.html" target="_self">Contact</a>
+                    </li>
+                </ul>
+
+                <p class="list-unstyled mt-3 mb-5">
+                    <a href="3d-printing/san-francisco-ca/index.html">San Francisco CA 3D Printing</a>
+                    &bull;
+                    <a href="3d-printing/charlotte-nc/index.html">Charlotte NC 3D Printing</a>
+                    &bull;
+                    <a href="3d-printing/raleigh-nc/index.html">Raleigh NC 3D Printing</a>
+                    &bull;
+                    <a href="3d-printing/dallas-tx/index.html">Dallas TX 3D Printing</a>
+                    &bull;
+                    <a href="3d-printing/baltimore-md/index.html">Baltimore MD 3D Printing</a>
+                </p>
+
+                <p class="footer-brand mb-0">
+                    &copy; 2022 Print a Thing, LLC. All Rights Reserved.
+                </p>
+
+                                <div id="random-id"></div>
+
+                <script>
+                    if (typeof randomId !== 'undefined') document.getElementById('random-id').appendChild(document.createTextNode(randomId));
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+            <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBW27QarrVgVCW6qCXZwNCkXx7IFvqEymk&amp;libraries=places"></script>
+        <script src="bundles/patweb/js/vendor/require.js" data-main="/bundles/patweb/js/"></script>
+        <script>
+            define('appData', {
+                apiBase: '/api/'
+            });
+        </script>
+
+                    <script>
+                define('pageData', {});
+            </script>
+        
+        <script>
+            chrome && chrome.runtime.sendMessage('jlimbpmgnncifjajjbahffioianancbd', {}, response => {
+                // "Check" the error to avoid a console error on failure.
+                chrome.runtime.lastError;
+                if (!response) {
+                    return;
+                }
+                document.querySelectorAll('[data-extension=hide]').forEach(item => item.style['display'] = 'none');
+                document.querySelectorAll('[data-extension=show]').forEach(item => item.style['display'] = 'inherit');
+            });
+        </script>
+
+        <script>
+            require(['main']);
+        </script>
+    
+    <script>
+        const param = new URL(window.location.html).searchParams.get('s');
+        if (typeof param === 'string') {
+            const matches = param.match(/^(?<codeName>[a-zA-Z]+)(?<medium>_o|_a)?$/);
+            if (matches !== null) {
+                const codeName = matches.groups['codeName'];
+                const previousCodeName = window.localStorage.getItem('preferredSupplier');
+                window.localStorage.setItem('preferredSupplier', codeName);
+                window.history.replaceState(
+                    null,
+                    null,
+                    window.location.pathname + window.location.search.replace(new RegExp(`s=${param}&?`), '')
+                );
+                ga('set', 'campaignSource', 'code_name');
+                const campaignMedium = ({'_o': 'email', '_a': 'shared_link'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignMedium', campaignMedium);
+                const campaignName = ({'_o': 'order_confirmation', '_a': 'auction'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignName', campaignName);
+                ga('set', 'campaignContent', codeName);
+                ga('send', 'event', 'auction-supplier-link', 'follow', campaignMedium + '-' + campaignName);
+
+                fetch(`/api/v1/supplier-link/${codeName}/followed`, {method: "POST"})
+                if (previousCodeName !== codeName) {
+                    if (previousCodeName) {
+                        fetch(`/api/v1/supplier-link/${previousCodeName}/removed`, {method: "POST"})
+                    }
+                    fetch(`/api/v1/supplier-link/${codeName}/assigned`, {method: "POST"})
+                }
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from printathing.com/terms.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 03:01:50 GMT -->
+</html>

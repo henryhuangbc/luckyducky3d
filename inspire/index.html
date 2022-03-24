@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<!-- Mirrored from printathing.com/inspire/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 03:04:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>
+        if (document.cookie.indexOf('patRID') < 0) {
+                        randomId = Math.floor(Math.random() * Math.pow(2,32));
+            var d = new Date();
+            d.setTime(d.getTime()+(720*24*60*60*1000));
+            document.cookie = 'patRID='+randomId+'; expires='+ d.toUTCString();
+        }
+    </script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-51146623-1', 'printathing.com');
+    
+        try {
+        var source = new URLSearchParams(window.location.search).get('source');
+        if (source) {
+            ga('set', 'campaignSource', source);
+        }
+    } catch (exception) { }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    randomId = getCookie('patRID');
+
+        ga('set', 'dimension1', 'thingiverse_link=_no,dummy_test=_a,3d_preview=_yes,maker_image=_guyCheckeredShirt,maker_num_materials=_18,maker_garuntee=_supplierImprove,maker_ease=_yes,maker_value=_yes,maker_call_to_action_color=_green,maker_call_to_action_text=startYour3DPrint,maker_trust_logo=_yes,maker_top_navigation=no,maker_testimonials=no,maker_how_works=no,maker_featured_by=no,royalty_hero_image=designersTeam,royalty_top_navigation=_yes,royalty_hey_designers_headline=designShareProfit,royalty_cta_text=_startEarning,royalty_price_slide_2=minimal,turn_around_max_days=_14,maker_image_same_day_test=_clockFrontCloseHand,maker_headline_and_subtext_not_same_day=_best3DProject,maker_headline_same_day=iterateQuickly,default_material=white,maker_headline_and_subtext_two_week=whatsBettter,thingiverse_next_day_delivery=_no,kisslicer_double_time=_0,beta_logo=_yes,show_delivery_time_quote_2=_no,tv_printability_warning=yes,order_minimum=0,shipping_charge=14,config_charge=8,material_price=1.4');
+
+        ga('set', 'dimension2', '19602123171781521403');
+
+        ga('set', 'dimension4', randomId);
+
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.html');
+    ga('send', 'pageview');
+</script>
+<script>
+    function _gaLt(event) {
+        var el = event.srcElement || event.target;
+
+        /* Loop up the DOM tree through parent elements if clicked element is not a link (eg: an image inside a link) */
+        while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
+            el = el.parentNode;
+        }
+
+        if (!el || !el.href) {
+            return;
+        }
+
+        /* link */
+        var link = el.href;
+        if (link.indexOf(location.host) != -1) {
+            // Internal link
+            return;
+        }
+
+        if (link.match(/^javascript\:/i)){
+            return;
+        }
+
+        /* It's a popup if shift/ctrl/command are held or the target is _blank */
+        var popup = event.shiftKey || event.ctrlKey || event.metaKey || el.target && !el.target.match(/^_(self|parent|top)$/i);
+
+        function doClick() {
+            // Change the window location after success if not a popup
+            if (!popup) window.location.href = link;
+        }
+        ga('send', 'event', 'outbound', 'click', link, { 'hitCallback': function() {
+            doClick();
+        }});
+
+        // In case GA doesn't return, make sure the click action still happens.
+        setTimeout(doClick, 1000);
+
+        /* Prevent standard click if not a popup */
+        popup || (event.preventDefault ? event.preventDefault() : event.returnValue = !1);
+    }
+
+    /* Attach the event to all clicks in the document after page has loaded */
+    var w = window;
+    w.addEventListener ? w.addEventListener('load',function(){document.body.addEventListener('click',_gaLt,!1)},!1)
+            : w.attachEvent && w.attachEvent('onload',function(){document.body.attachEvent('onclick',_gaLt)});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics (Optimize property) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51146623-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-51146623-3', {'optimize_id': 'OPT-MGXT86T'});
+    // gtag('config', 'UA-186697821-1', {'optimize_id': 'OPT-MVZCPP6'});
+</script>
+<script>
+    (() => {
+        window.tfo = window.tfo || [];
+        window.tfo.push = n => {
+            const c = g('tfo').filter(v => !v.startsWith(n.slice(0, -1)));
+            c.push(n);
+            s('tfo', c);
+        };
+        window.tfo.forEach(window.tfo.push);
+        const g = n => (document.cookie.split(';').map(v => v.trim()).find(v => v.startsWith(`${n}=`)) || '').slice(n.length + 1).split('-').filter(v => v !== '');
+        const s = (n, v) => document.cookie = n + '=' + v.join('-') + ';path=/';
+        const m = () => {
+            const c = g('tfs');
+            return g('tfo').find(n => !c.includes(n));
+        };
+        const e = () => {
+            if (m()) {
+                fetch(`/`).then(() => {
+                    if (m()) {
+                        console.error('TFO mismatch', g('tfo'), g('tfs'));
+                        s('tfo', []);
+                    }
+                });
+            }
+        }
+        setInterval(e, 1000);
+    })();
+</script>
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+t.async=!0,t.src='../../static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
+s.parentNode.insertBefore(t,s))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nvf7w');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+    <meta charset="utf-8">
+    <base >
+
+            <title ng-bind="($title ? $title + ' - ' : '') + 'Print a Thing'">
+                            Print a Thing
+                    </title>
+    
+            <meta name="description" content="Print a Thing is a crowd-sourced custom 3D printing service that provides low-cost, quick-turn, and high-quality results for hobbyists, experimenters and entrepreneurs." />
+    
+            <meta name="keywords" content="3d printing service, custom 3d printing, 3d printing" />
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../bundles/patweb/css/plugins.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/fonts.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/main.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/rzslider.min.css" />
+    <link rel="stylesheet" href="../../ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+        <link rel="stylesheet" href="../bundles/patweb/css/remodal.css" />
+    <link rel="stylesheet" href="../bundles/patweb/css/remodal-default-theme.css" />
+
+    <link rel="chrome-webstore-item" href="../../chrome.google.com/webstore/detail/iocbnflhfijmepenegmoljbnhljifmch.html">
+    <meta name="google-site-verification" content="vJhUAhdpe1A31cFs3qzVyZ9jgDM-YUV-ryjJ6pfqiIE" />
+            <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        '../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '174968876357844');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="../../www.facebook.com/tr9432.gif?id=174968876357844&amp;ev=PageView&amp;noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code --></head>
+
+<body class="web_home_inspire-route ">
+            <div class="header">
+    <ul class="nav"></ul>
+</div>
+<div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="1" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Print a Thing<sup class="sup">beta</sup></a>        </div>
+        <div class="navbar-collapse collapse">
+    <div class="right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="../order/index.html">
+                    <strong>
+                        Order
+                    </strong>
+                </a>
+            </li>
+            <li class="dropdown">
+                  <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    Explore 3D Printing
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                        <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../about/why/index.html">Why 3D Print?</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../help/index.html">Frequently Asked Questions</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../blog/index.html">Blog</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../print-the-thing/index.html">
+                            Chrome Extension
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../about/index.html">About Us</a>
+                    </li>
+                  </ul>
+            </li>
+                        <li>
+                    <a href="../supplier/register/index.html">Supply</a>
+            </li>
+            
+            <li>
+                            <a href="../about/contact/index.html">Contact</a>
+                        </li>
+
+            <!-- <li>
+                <a href="/create/">Create</a>
+            </li> -->
+                                </ul>
+        <hr class="visible-xs" />
+        <div class="navbar-right">
+                            
+                <div class="hidden-xs">
+                    <span class="toggle-buttons login-collapse collapse width in">
+                        <button
+                            data-toggle="collapse"
+                            type="button"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</button>
+                                                                                            </span>
+                    <div class="collapse width login-form login-collapse" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+                            <a class="btn btn-link"
+                            data-toggle="collapse"
+                            data-target=".login-collapse"
+                            >
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                            </a>
+                            <a
+                            class="btn btn-link"
+                            href="../register/index.html">
+                                <small>Join Today</small>
+                            </a>
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="visible-xs">
+                    <div class="toggle-buttons login-collapse collapse in text-right">
+                        <a
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</a>
+                                                                                                </div>
+                    <div class="collapse login-form login-collapse text-right" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                                        <!-- <a class="btn btn-link text-danger"
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            >
+                            <small>Close</small>
+                            </a> -->
+                                        <a
+                            class="btn btn-link"
+                            href="../register/index.html">
+                                <small>Join Today</small>
+                            </a>
+
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</div>
+    </div>
+</div>
+    
+            <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                                                    <div class="page-header page-header-empty">
+
+                            </div>
+                        
+                                                                            
+                                                    <div class="breadcrumbs">
+                                                            </div>
+                                            </div>
+                </div>
+
+                    <div class="jumbotron">
+        <center>
+          <h1 style="margin-top:0">Get inspired!</h1>
+          <p>These are a few of our favorite things.</p>
+        </center>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="9pRldlTRfXhbNQCsVpO8RpiJI0c1IV7vl1GH3LKoUDQ" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/christmas-snowflake_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Christmas Snowflake</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$3.61</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$0.65</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="9pRldlTRfXhbNQCsVpO8RpiJI0c1IV7vl1GH3LKoUDQ" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Christmas Snowflake</h1>
+            <img src="../bundles/patweb/img/home/inspire/christmas-snowflake_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Christmas Snowflake</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$3.61*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$0.65*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$2.96 (82%)</span></div>
+            <small>* Priced with an infill of 10%</small>
+            <p style="margin-top:15px">
+                This might be your first snowflake of the season, and it's guaranteed not to melt. Make one, two or a dozen to adorn your home for the holidays.
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=9pRldlTRfXhbNQCsVpO8RpiJI0c1IV7vl1GH3LKoUDQ" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/madkite" target="_blank">madkite</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="qjOgQotIpZ6V2lpEpN46kCLdemsy9Sq1fhwj5Xu-Zms" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/dreidel_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Dreidel</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$6.85</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$2.90</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="qjOgQotIpZ6V2lpEpN46kCLdemsy9Sq1fhwj5Xu-Zms" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Dreidel</h1>
+            <img src="../bundles/patweb/img/home/inspire/dreidel_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Dreidel</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$6.85*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$2.90*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$3.95 (58%)</span></div>
+            <small>* Priced with an infill of 100%</small>
+            <p style="margin-top:15px">
+                Here's a new spin on the traditional Hanukkah Dreidel for holiday fun and games. You can make it in a whole range of colors!
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=qjOgQotIpZ6V2lpEpN46kCLdemsy9Sq1fhwj5Xu-Zms" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/Davmic" target="_blank">Davmic</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="3gYcPlw8O9eNR5s_tFR8Gfpw6i8KVp56mQpmX7qH0Ls" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/coral-candle-fixture_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Coral Candle Holder</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$8.13</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$4.37</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="3gYcPlw8O9eNR5s_tFR8Gfpw6i8KVp56mQpmX7qH0Ls" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Coral Candle Holder</h1>
+            <img src="../bundles/patweb/img/home/inspire/coral-candle-fixture_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Coral Candle Holder</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$8.13*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$4.37*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$3.76 (46%)</span></div>
+            <small>* Priced with an infill of 25%</small>
+            <p style="margin-top:15px">
+                This delicate candle holder casts beautiful shadows reminiscent of a coral reef.
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=3gYcPlw8O9eNR5s_tFR8Gfpw6i8KVp56mQpmX7qH0Ls" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/ecken" target="_blank">ecken</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="4b0uruAt4IfG4e4DydkP971Uy-5A5WUCq6kLc4thS1c" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/the-twist_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">The Twist</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$51.66</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$17.99</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="4b0uruAt4IfG4e4DydkP971Uy-5A5WUCq6kLc4thS1c" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">The Twist</h1>
+            <img src="../bundles/patweb/img/home/inspire/the-twist_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">The Twist</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$51.66*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$17.99*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$33.67 (65%)</span></div>
+            <small>* Priced with an infill of 10%</small>
+            <p style="margin-top:15px">
+                Let's do the twist, with a retro candleholder that's fun and unique.
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=4b0uruAt4IfG4e4DydkP971Uy-5A5WUCq6kLc4thS1c" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/Kazzee" target="_blank">Kazzee</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="Jq1MsfvoJ1LIPUoJmiw8jAJRk5ZKt7sYCW2R0IyIG_I" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/death-star_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Death Star</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$26.69</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$13.85</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="Jq1MsfvoJ1LIPUoJmiw8jAJRk5ZKt7sYCW2R0IyIG_I" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Death Star</h1>
+            <img src="../bundles/patweb/img/home/inspire/death-star_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Death Star</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$26.69*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$13.85*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$12.84 (48%)</span></div>
+            <small>* Priced with an infill of 12.5%</small>
+            <p style="margin-top:15px">
+                What to give a Star Wars junkie you ask? Why a Death Star of course!
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=Jq1MsfvoJ1LIPUoJmiw8jAJRk5ZKt7sYCW2R0IyIG_I" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/embeddedjunkie" target="_blank">embeddedjunkie</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a data-remodal-target="a4JBWl7QFqRa0-Td6UYcIpx9HBWYK67CtCShBgSSxuI" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/chip-clip_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Chip Clip</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$5.72</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$1.42</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="a4JBWl7QFqRa0-Td6UYcIpx9HBWYK67CtCShBgSSxuI" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Chip Clip</h1>
+            <img src="../bundles/patweb/img/home/inspire/chip-clip_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Chip Clip</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$5.72*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$1.42*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$4.30 (75%)</span></div>
+            <small>* Priced with an infill of 100%</small>
+            <p style="margin-top:15px">
+                This is one serious, industrial strength chip clip. Print in ABS for maximum durability.
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=a4JBWl7QFqRa0-Td6UYcIpx9HBWYK67CtCShBgSSxuI" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/drayde" target="_blank">drayde</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 text-center">
+            <a data-remodal-target="rAreqIZ9sS-OT3mXO6E6UDEUovzMxVoVahDGP4LhCTk" href="javascript:void(0)">
+    <img src="../bundles/patweb/img/home/inspire/combination-safe_648.jpg" style="max-width:220px"/>
+    <h4 style="margin:5px 0">Combination Safe</h4>
+</a>
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+        Competitor
+        <div><s>$110.82</s></div>
+    </div>
+    <div class="col-xs-5 col-sm-4">
+        <strong>
+            Print a Thing
+            <h4 class="brand-danger text-danger" style="margin-top:0">$25.50</h4>
+        </strong>
+    </div>
+</div>
+<div style="margin-top:20px"></div>
+<div class="remodal" data-remodal-id="rAreqIZ9sS-OT3mXO6E6UDEUovzMxVoVahDGP4LhCTk" data-remodal-options="hashTracking:false" style="padding-bottom:10px">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="row">
+        <div class="col-sm-7" style="margin-bottom:10px">
+            <h1 class="hidden-sm hidden-md hidden-lg" style="margin-top:0">Combination Safe</h1>
+            <img src="../bundles/patweb/img/home/inspire/combination-safe_648.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="col-sm-5">
+            <h1 class="hidden-xs" style="margin-top:0">Combination Safe</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-sm-offset-1">
+                    Competitor
+                    <div><s>$110.82*</s></div>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <strong>
+                        Print a Thing
+                        <h4 class="brand-danger text-danger" style="margin-top:0">$25.50*</h4>
+                    </strong>
+                </div>
+            </div>
+            <div>You Save: <span class="brand-danger text-danger">$85.32 (77%)</span></div>
+            <small>* Priced with an infill of 10%</small>
+            <p style="margin-top:15px">
+                Protect your not-so-valuables with your own personal plastic five-digit cryptex safe. For directions on assembly see <a href="http://www.thingiverse.com/thing:586169" target="_blank">this page</a>.
+            </p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a href="../order/index.html#?u=rAreqIZ9sS-OT3mXO6E6UDEUovzMxVoVahDGP4LhCTk" class="btn btn-primary btn-lg btn-block">
+                        Print It
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px">
+                <small>
+                    Thing by <a href="http://www.thingiverse.com/SavageRodent" target="_blank">SavageRodent</a>
+                    is licensed under<br />the
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a>
+                    license.
+                </small>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    
+            
+<footer class="footer hidden-print">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!--
+<div class="text-center">
+	<div class="panel panel-default call-widget">
+		Questions?
+		&bull;
+		1-855-55-3DPRINT (1-855-553-3774)
+		&bull;
+		M-Th 11am-Midnight CT
+                &bull;
+                F 11am-5pm CT
+	</div>
+</div>
+-->
+                <ul class="nav nav-pills footer-nav">
+                    <li>
+                        <a href="../about/index.html" target="_self">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="../terms.html" target="_self">Terms of Service</a>
+                    </li>
+
+                    <li>
+                        <a href="../privacy.html" target="_self">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="../about/contact/index.html" target="_self">Contact</a>
+                    </li>
+                </ul>
+
+                <p class="list-unstyled mt-3 mb-5">
+                    <a href="../3d-printing/san-francisco-ca/index.html">San Francisco CA 3D Printing</a>
+                    &bull;
+                    <a href="../3d-printing/charlotte-nc/index.html">Charlotte NC 3D Printing</a>
+                    &bull;
+                    <a href="../3d-printing/raleigh-nc/index.html">Raleigh NC 3D Printing</a>
+                    &bull;
+                    <a href="../3d-printing/dallas-tx/index.html">Dallas TX 3D Printing</a>
+                    &bull;
+                    <a href="../3d-printing/baltimore-md/index.html">Baltimore MD 3D Printing</a>
+                </p>
+
+                <p class="footer-brand mb-0">
+                    &copy; 2022 Print a Thing, LLC. All Rights Reserved.
+                </p>
+
+                                <div id="random-id"></div>
+
+                <script>
+                    if (typeof randomId !== 'undefined') document.getElementById('random-id').appendChild(document.createTextNode(randomId));
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+            <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBW27QarrVgVCW6qCXZwNCkXx7IFvqEymk&amp;libraries=places"></script>
+        <script src="../bundles/patweb/js/vendor/require.js" data-main="/bundles/patweb/js/"></script>
+        <script>
+            define('appData', {
+                apiBase: '/api/'
+            });
+        </script>
+
+                    <script>
+                define('pageData', {});
+            </script>
+        
+        <script>
+            chrome && chrome.runtime.sendMessage('jlimbpmgnncifjajjbahffioianancbd', {}, response => {
+                // "Check" the error to avoid a console error on failure.
+                chrome.runtime.lastError;
+                if (!response) {
+                    return;
+                }
+                document.querySelectorAll('[data-extension=hide]').forEach(item => item.style['display'] = 'none');
+                document.querySelectorAll('[data-extension=show]').forEach(item => item.style['display'] = 'inherit');
+            });
+        </script>
+
+        <script>
+            require(['main']);
+        </script>
+    
+    <script>
+        const param = new URL(../window.location.html).searchParams.get('s');
+        if (typeof param === 'string') {
+            const matches = param.match(/^(?<codeName>[a-zA-Z]+)(?<medium>_o|_a)?$/);
+            if (matches !== null) {
+                const codeName = matches.groups['codeName'];
+                const previousCodeName = window.localStorage.getItem('preferredSupplier');
+                window.localStorage.setItem('preferredSupplier', codeName);
+                window.history.replaceState(
+                    null,
+                    null,
+                    window.location.pathname + window.location.search.replace(new RegExp(`s=${param}&?`), '')
+                );
+                ga('set', 'campaignSource', 'code_name');
+                const campaignMedium = ({'_o': 'email', '_a': 'shared_link'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignMedium', campaignMedium);
+                const campaignName = ({'_o': 'order_confirmation', '_a': 'auction'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignName', campaignName);
+                ga('set', 'campaignContent', codeName);
+                ga('send', 'event', 'auction-supplier-link', 'follow', campaignMedium + '-' + campaignName);
+
+                fetch(`/api/v1/supplier-link/${codeName}/followed`, {method: "POST"})
+                if (previousCodeName !== codeName) {
+                    if (previousCodeName) {
+                        fetch(`/api/v1/supplier-link/${previousCodeName}/removed`, {method: "POST"})
+                    }
+                    fetch(`/api/v1/supplier-link/${codeName}/assigned`, {method: "POST"})
+                }
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from printathing.com/inspire/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 03:04:21 GMT -->
+</html>

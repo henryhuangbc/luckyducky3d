@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<!-- Mirrored from printathing.com/3d-printing/charlotte-nc/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 02:55:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>
+        if (document.cookie.indexOf('patRID') < 0) {
+                        randomId = Math.floor(Math.random() * Math.pow(2,32));
+            var d = new Date();
+            d.setTime(d.getTime()+(720*24*60*60*1000));
+            document.cookie = 'patRID='+randomId+'; expires='+ d.toUTCString();
+        }
+    </script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-51146623-1', 'printathing.com');
+    
+        try {
+        var source = new URLSearchParams(window.location.search).get('source');
+        if (source) {
+            ga('set', 'campaignSource', source);
+        }
+    } catch (exception) { }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    randomId = getCookie('patRID');
+
+        ga('set', 'dimension1', 'thingiverse_link=_no,dummy_test=_a,3d_preview=_yes,maker_image=_guyCheckeredShirt,maker_num_materials=_18,maker_garuntee=_supplierImprove,maker_ease=_yes,maker_value=_yes,maker_call_to_action_color=_green,maker_call_to_action_text=startYour3DPrint,maker_trust_logo=_yes,maker_top_navigation=no,maker_testimonials=no,maker_how_works=no,maker_featured_by=no,royalty_hero_image=designersTeam,royalty_top_navigation=_yes,royalty_hey_designers_headline=designShareProfit,royalty_cta_text=_startEarning,royalty_price_slide_2=minimal,turn_around_max_days=_14,maker_image_same_day_test=_clockFrontCloseHand,maker_headline_and_subtext_not_same_day=_best3DProject,maker_headline_same_day=iterateQuickly,default_material=white,maker_headline_and_subtext_two_week=whatsBettter,thingiverse_next_day_delivery=_no,kisslicer_double_time=_0,beta_logo=_yes,show_delivery_time_quote_2=_no,tv_printability_warning=yes,order_minimum=0,shipping_charge=14,config_charge=8,material_price=1.4');
+
+        ga('set', 'dimension2', '5181559361450263412');
+
+        ga('set', 'dimension4', randomId);
+
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.html');
+    ga('send', 'pageview');
+</script>
+<script>
+    function _gaLt(event) {
+        var el = event.srcElement || event.target;
+
+        /* Loop up the DOM tree through parent elements if clicked element is not a link (eg: an image inside a link) */
+        while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
+            el = el.parentNode;
+        }
+
+        if (!el || !el.href) {
+            return;
+        }
+
+        /* link */
+        var link = el.href;
+        if (link.indexOf(location.host) != -1) {
+            // Internal link
+            return;
+        }
+
+        if (link.match(/^javascript\:/i)){
+            return;
+        }
+
+        /* It's a popup if shift/ctrl/command are held or the target is _blank */
+        var popup = event.shiftKey || event.ctrlKey || event.metaKey || el.target && !el.target.match(/^_(self|parent|top)$/i);
+
+        function doClick() {
+            // Change the window location after success if not a popup
+            if (!popup) window.location.href = link;
+        }
+        ga('send', 'event', 'outbound', 'click', link, { 'hitCallback': function() {
+            doClick();
+        }});
+
+        // In case GA doesn't return, make sure the click action still happens.
+        setTimeout(doClick, 1000);
+
+        /* Prevent standard click if not a popup */
+        popup || (event.preventDefault ? event.preventDefault() : event.returnValue = !1);
+    }
+
+    /* Attach the event to all clicks in the document after page has loaded */
+    var w = window;
+    w.addEventListener ? w.addEventListener('load',function(){document.body.addEventListener('click',_gaLt,!1)},!1)
+            : w.attachEvent && w.attachEvent('onload',function(){document.body.attachEvent('onclick',_gaLt)});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics (Optimize property) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51146623-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-51146623-3', {'optimize_id': 'OPT-MGXT86T'});
+    // gtag('config', 'UA-186697821-1', {'optimize_id': 'OPT-MVZCPP6'});
+</script>
+<script>
+    (() => {
+        window.tfo = window.tfo || [];
+        window.tfo.push = n => {
+            const c = g('tfo').filter(v => !v.startsWith(n.slice(0, -1)));
+            c.push(n);
+            s('tfo', c);
+        };
+        window.tfo.forEach(window.tfo.push);
+        const g = n => (document.cookie.split(';').map(v => v.trim()).find(v => v.startsWith(`${n}=`)) || '').slice(n.length + 1).split('-').filter(v => v !== '');
+        const s = (n, v) => document.cookie = n + '=' + v.join('-') + ';path=/';
+        const m = () => {
+            const c = g('tfs');
+            return g('tfo').find(n => !c.includes(n));
+        };
+        const e = () => {
+            if (m()) {
+                fetch(`/`).then(() => {
+                    if (m()) {
+                        console.error('TFO mismatch', g('tfo'), g('tfs'));
+                        s('tfo', []);
+                    }
+                });
+            }
+        }
+        setInterval(e, 1000);
+    })();
+</script>
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+t.async=!0,t.src='../../../static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
+s.parentNode.insertBefore(t,s))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nvf7w');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+    <meta charset="utf-8">
+    <base >
+
+        <title>3D Printing in Charlotte, North Carolina. Quick &amp; Affordable Services.</title>
+
+        <meta name="description" content="Charlotte NC 3D printing services. Great pricing, fast turnaround. Upload your 3d file." />
+
+        <meta name="keywords" content="3d printing service, custom 3d printing, 3d printing, Charlotte, North Carolina" />
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../../bundles/patweb/css/plugins.css" />
+    <link rel="stylesheet" href="../../bundles/patweb/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../bundles/patweb/css/fonts.css" />
+    <link rel="stylesheet" href="../../bundles/patweb/css/main.css" />
+    <link rel="stylesheet" href="../../bundles/patweb/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="../../bundles/patweb/css/rzslider.min.css" />
+    <link rel="stylesheet" href="../../../ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+                
+    <link rel="chrome-webstore-item" href="../../../chrome.google.com/webstore/detail/iocbnflhfijmepenegmoljbnhljifmch.html">
+    <meta name="google-site-verification" content="vJhUAhdpe1A31cFs3qzVyZ9jgDM-YUV-ryjJ6pfqiIE" />
+            <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '174968876357844');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="../../../www.facebook.com/tr9432.gif?id=174968876357844&amp;ev=PageView&amp;noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code --></head>
+
+<body class="pat_web_localmarket_printing-route ">
+            <div class="header">
+    <ul class="nav"></ul>
+</div>
+<div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="1" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Print a Thing<sup class="sup">beta</sup></a>        </div>
+        <div class="navbar-collapse collapse">
+    <div class="right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="../../order/index.html">
+                    <strong>
+                        Order
+                    </strong>
+                </a>
+            </li>
+            <li class="dropdown">
+                  <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    Explore 3D Printing
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                        <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../../about/why/index.html">Why 3D Print?</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../../help/index.html">Frequently Asked Questions</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../../blog/index.html">Blog</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../../print-the-thing/index.html">
+                            Chrome Extension
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="../../about/index.html">About Us</a>
+                    </li>
+                  </ul>
+            </li>
+                        <li>
+                    <a href="../../supplier/register/index.html">Supply</a>
+            </li>
+            
+            <li>
+                            <a href="../../about/contact/index.html">Contact</a>
+                        </li>
+
+            <!-- <li>
+                <a href="/create/">Create</a>
+            </li> -->
+                                </ul>
+        <hr class="visible-xs" />
+        <div class="navbar-right">
+                            
+                <div class="hidden-xs">
+                    <span class="toggle-buttons login-collapse collapse width in">
+                        <button
+                            data-toggle="collapse"
+                            type="button"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</button>
+                                                                                            </span>
+                    <div class="collapse width login-form login-collapse" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+                            <a class="btn btn-link"
+                            data-toggle="collapse"
+                            data-target=".login-collapse"
+                            >
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                            </a>
+                            <a
+                            class="btn btn-link"
+                            href="../../register/index.html">
+                                <small>Join Today</small>
+                            </a>
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="visible-xs">
+                    <div class="toggle-buttons login-collapse collapse in text-right">
+                        <a
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            class="btn btn-default toggle-login collapsed">Login</a>
+                                                                                                </div>
+                    <div class="collapse login-form login-collapse text-right" id="login-form">
+                        <form
+                                class="navbar-form"
+                                action="http://printathing.com/login_check"
+                                method="post">
+
+                            <input
+                                    type="hidden"
+                                    name="_csrf_token"
+                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                            <input
+                                    type="hidden"
+                                    name="_remember_me"
+                                    value="on" />
+
+                            <div class="form-group">
+                                <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="_username"
+                                        autocomplete="username"
+                                        class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input
+                                        type="password"
+                                        name="_password"
+                                        placeholder="Password"
+                                        autocomplete="current-password"
+                                        class="form-control" />
+                            </div>
+                                        <!-- <a class="btn btn-link text-danger"
+                            data-toggle="collapse"
+                            href="#"
+                            data-target=".login-collapse"
+                            >
+                            <small>Close</small>
+                            </a> -->
+                                        <a
+                            class="btn btn-link"
+                            href="../../register/index.html">
+                                <small>Join Today</small>
+                            </a>
+
+                            <button
+                                    type="submit"
+                                    class="btn btn-default btn-submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</div>
+    </div>
+</div>
+    
+            <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                                                    <div class="page-header page-header-empty">
+
+                            </div>
+                        
+                                                                            
+                                                    <div class="breadcrumbs">
+                                                            </div>
+                                            </div>
+                </div>
+
+                    <div class="page">
+        <h1 class="mt-4 text-center">Charlotte 3D Printing Services</h1>
+
+        <hr class="mt-5" />
+
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <p>
+                    Do you have a 3D design but no printer?
+                    Don’t worry, Print a Thing has you covered.
+                    We offer a variety of 3D printing materials and services, shipping to
+                    Charlotte, North Carolina.
+                </p>
+
+                <div class="row mt-5">
+                    <div class="col-sm-4 col-sm-pull-4 col-sm-push-4 col-lg-2 col-lg-push-5 col-lg-pull-5">
+                        <a class="btn btn-block btn-lg btn-primary" href="../../order/index.html">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron slide" style="background-image: url('../../bundles/patweb/img/supplier-conversation.jpg');">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-6">
+                        <h3>How it works:</h3>
+
+                        <p>
+                            <span>1. Upload your STL 3D file.</span><br />
+
+                            <span>2. Select material type, color, infill, and quantity.</span><br />
+
+                            <span>3. Get an instant quote.</span><br />
+
+                            <span>4. Make your purchase</span><br />
+
+                            <span>
+                                5.
+                                Wait a few days and receive your item in the mail.
+                                We have a 14 day shipping guarantee,
+                                but 95% of our orders in Charlotte NC
+                                arrive within 7 days of ordering.
+                            </span>
+                        </p>
+
+                        <div class="row mt-5">
+                            <div class="col-sm-6 col-sm-pull-3 col-sm-push-3 col-lg-4 col-lg-push-4 col-lg-pull-4">
+                                <a class="btn btn-block btn-lg btn-default" href="../../order/index.html">
+                                    Get Started
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <figcaption class="text-right">
+                <small>
+                    <a href="https://www.flickr.com/photos/jeanbaptisteparis/4472990131/" target="_blank" rel="nofollow">
+                        Photo by jeanbaptisteparis /
+                    </a>
+
+                    <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank" rel="nofollow">
+                        CC BY
+                    </a>
+                </small>
+            </figcaption>
+        </div>
+
+        <h3 class="mb-5" style="margin-top:60px">
+            Our machines in Charlotte:
+        </h3>
+
+        <div class="row">
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            XYZ Printing
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Da Vinci 2.0
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Purple<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Custom
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Custom
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Brown<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Prusa
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            MK3
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Gray<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Original Prusa
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            MK2S
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Silver<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Monoprice
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Maker Select Plus
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Tronxy
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            X1
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            cr-10
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Blue<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Prusa
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Mk3S
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Clear<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Brown<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gold<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Silver<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Prusa
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Mk2.5S
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Clear<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Brown<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gold<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Silver<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Light<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Artillery
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Sidewinder X1
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Prusa
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            MK3S
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PET, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, White<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Qidi Tech
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            X-Plus
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, White<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Ultimaker
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            S5
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Ender 3 Pro
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Ender 3 Pro
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Monoprice
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Maker Ultimate MK11
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        Ninjaflex, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        Ninjaflex, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Metal-Filled, Iron (Magnetic)<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Purple<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Ender 3
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Black<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality3D
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            CR-10
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Ended 3
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        BendLay, Translucent, Clear<br />
+                                    </span>
+                                                                    <span>
+                                        HDglass, Transparent, Black<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Tenlog
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            TL D3-Pro
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        ABS, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        Ninjaflex, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        Ninjaflex, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Metal-Filled, Iron (Magnetic)<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Blue<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Sovol
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            SV01
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Clear<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Brown<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Gold<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Silver<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, White<br />
+                                    </span>
+                                                                    <span>
+                                        PET, Opaque, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Brown<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Brown<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Gold<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Silver<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, White<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Yellow<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Glow-In-The-Dark, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gold<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Silver<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Bamboo<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Cherry<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Coconut<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Dark<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Wood, Light<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Black<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Blue<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Green<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Orange<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Pink<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Purple<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, Red<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Translucent, White<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div>
+                                                            <img
+                                        title="Fused Filament Fabrication (FFF/FDM)"
+                                        alt="FFF/FDM printer"
+                                        src="../../bundles/patweb/img/local-market/fff.jpg"
+                                        style="width: 100%;"
+                                />
+                            
+                                                    </div>
+
+                        <div class="panel-body">
+                            <h5 class="mt-0 mb-1">Make:</h5>
+
+                            Creality
+
+                            <h5 class="mt-3 mb-1">Model:</h5>
+
+                            Ender 3 Pro
+
+                            <h5 class="mt-3 mb-1">Materials:</h5>
+
+                            <div style="height: 200px; overflow: scroll; overflow-x: hidden;">
+                                                                    <span>
+                                        PLA, Translucent, Clear<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Gray<br />
+                                    </span>
+                                                                    <span>
+                                        PLA, Opaque, Flexible, Black<br />
+                                    </span>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+            </div>
+        </div>
+    
+            
+<footer class="footer hidden-print">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!--
+<div class="text-center">
+	<div class="panel panel-default call-widget">
+		Questions?
+		&bull;
+		1-855-55-3DPRINT (1-855-553-3774)
+		&bull;
+		M-Th 11am-Midnight CT
+                &bull;
+                F 11am-5pm CT
+	</div>
+</div>
+-->
+                <ul class="nav nav-pills footer-nav">
+                    <li>
+                        <a href="../../about/index.html" target="_self">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="../../terms.html" target="_self">Terms of Service</a>
+                    </li>
+
+                    <li>
+                        <a href="../../privacy.html" target="_self">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="../../about/contact/index.html" target="_self">Contact</a>
+                    </li>
+                </ul>
+
+                <p class="list-unstyled mt-3 mb-5">
+                    <a href="../san-francisco-ca/index.html">San Francisco CA 3D Printing</a>
+                    &bull;
+                    <a href="index.html">Charlotte NC 3D Printing</a>
+                    &bull;
+                    <a href="../raleigh-nc/index.html">Raleigh NC 3D Printing</a>
+                    &bull;
+                    <a href="../dallas-tx/index.html">Dallas TX 3D Printing</a>
+                    &bull;
+                    <a href="../baltimore-md/index.html">Baltimore MD 3D Printing</a>
+                </p>
+
+                <p class="footer-brand mb-0">
+                    &copy; 2022 Print a Thing, LLC. All Rights Reserved.
+                </p>
+
+                                <div id="random-id"></div>
+
+                <script>
+                    if (typeof randomId !== 'undefined') document.getElementById('random-id').appendChild(document.createTextNode(randomId));
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+            <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBW27QarrVgVCW6qCXZwNCkXx7IFvqEymk&amp;libraries=places"></script>
+        <script src="../../bundles/patweb/js/vendor/require.js" data-main="/bundles/patweb/js/"></script>
+        <script>
+            define('appData', {
+                apiBase: '/api/'
+            });
+        </script>
+
+                    <script>
+                define('pageData', {});
+            </script>
+        
+        <script>
+            chrome && chrome.runtime.sendMessage('jlimbpmgnncifjajjbahffioianancbd', {}, response => {
+                // "Check" the error to avoid a console error on failure.
+                chrome.runtime.lastError;
+                if (!response) {
+                    return;
+                }
+                document.querySelectorAll('[data-extension=hide]').forEach(item => item.style['display'] = 'none');
+                document.querySelectorAll('[data-extension=show]').forEach(item => item.style['display'] = 'inherit');
+            });
+        </script>
+
+        <script>
+            require(['main']);
+        </script>
+    
+    <script>
+        const param = new URL(../../window.location.html).searchParams.get('s');
+        if (typeof param === 'string') {
+            const matches = param.match(/^(?<codeName>[a-zA-Z]+)(?<medium>_o|_a)?$/);
+            if (matches !== null) {
+                const codeName = matches.groups['codeName'];
+                const previousCodeName = window.localStorage.getItem('preferredSupplier');
+                window.localStorage.setItem('preferredSupplier', codeName);
+                window.history.replaceState(
+                    null,
+                    null,
+                    window.location.pathname + window.location.search.replace(new RegExp(`s=${param}&?`), '')
+                );
+                ga('set', 'campaignSource', 'code_name');
+                const campaignMedium = ({'_o': 'email', '_a': 'shared_link'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignMedium', campaignMedium);
+                const campaignName = ({'_o': 'order_confirmation', '_a': 'auction'})[matches.groups['medium']] || 'unknown';
+                ga('set', 'campaignName', campaignName);
+                ga('set', 'campaignContent', codeName);
+                ga('send', 'event', 'auction-supplier-link', 'follow', campaignMedium + '-' + campaignName);
+
+                fetch(`/api/v1/supplier-link/${codeName}/followed`, {method: "POST"})
+                if (previousCodeName !== codeName) {
+                    if (previousCodeName) {
+                        fetch(`/api/v1/supplier-link/${previousCodeName}/removed`, {method: "POST"})
+                    }
+                    fetch(`/api/v1/supplier-link/${codeName}/assigned`, {method: "POST"})
+                }
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from printathing.com/3d-printing/charlotte-nc/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 02:55:28 GMT -->
+</html>
