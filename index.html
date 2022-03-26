@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html ng-app="app">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+
 <head>
     <script>
         if (document.cookie.indexOf('patRID') < 0) {
-                        randomId = Math.floor(Math.random() * Math.pow(2,32));
+            randomId = Math.floor(Math.random() * Math.pow(2, 32));
             var d = new Date();
-            d.setTime(d.getTime()+(720*24*60*60*1000));
-            document.cookie = 'patRID='+randomId+'; expires='+ d.toUTCString();
+            d.setTime(d.getTime() + (720 * 24 * 60 * 60 * 1000));
+            document.cookie = 'patRID=' + randomId + '; expires=' + d.toUTCString();
         }
     </script>
 
-    
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
 
-                ga('create', 'UA-51146623-1', 'printathing.com');
-    
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-51146623-1', 'printathing.com');
+
         try {
-        var source = new URLSearchParams(window.location.search).get('source');
-        if (source) {
-            ga('set', 'campaignSource', source);
+            var source = new URLSearchParams(window.location.search).get('source');
+            if (source) {
+                ga('set', 'campaignSource', source);
+            }
+        } catch (exception) {}
+
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
         }
-    } catch (exception) { }
 
-    function getCookie(name) {
-        var value = "; " + document.cookie;
-        var parts = value.split("; " + name + "=");
-        if (parts.length == 2) return parts.pop().split(";").shift();
-    }
-
-    randomId = getCookie('patRID');
+        randomId = getCookie('patRID');
 
         ga('set', 'dimension1', 'thingiverse_link=_no,dummy_test=_a,3d_preview=_yes,maker_image=_guyCheckeredShirt,maker_num_materials=_18,maker_garuntee=_supplierImprove,maker_ease=_yes,maker_value=_yes,maker_call_to_action_color=_green,maker_call_to_action_text=startYour3DPrint,maker_trust_logo=_yes,maker_top_navigation=no,maker_testimonials=no,maker_how_works=no,maker_featured_by=no,royalty_hero_image=designersTeam,royalty_top_navigation=_yes,royalty_hey_designers_headline=designShareProfit,royalty_cta_text=_startEarning,royalty_price_slide_2=minimal,turn_around_max_days=_14,maker_image_same_day_test=_clockFrontCloseHand,maker_headline_and_subtext_not_same_day=_best3DProject,maker_headline_same_day=iterateQuickly,default_material=white,maker_headline_and_subtext_two_week=whatsBettter,thingiverse_next_day_delivery=_no,kisslicer_double_time=_0,beta_logo=_yes,show_delivery_time_quote_2=_no,tv_printability_warning=yes,order_minimum=0,shipping_charge=14,config_charge=8,material_price=1.4');
 
@@ -42,117 +51,132 @@
 
         ga('set', 'dimension4', randomId);
 
-    ga('require', 'displayfeatures');
-    ga('require', 'linkid', 'linkid.html');
-    ga('send', 'pageview');
-</script>
-<script>
-    function _gaLt(event) {
-        var el = event.srcElement || event.target;
+        ga('require', 'displayfeatures');
+        ga('require', 'linkid', 'linkid.html');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        function _gaLt(event) {
+            var el = event.srcElement || event.target;
 
-        /* Loop up the DOM tree through parent elements if clicked element is not a link (eg: an image inside a link) */
-        while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
-            el = el.parentNode;
-        }
-
-        if (!el || !el.href) {
-            return;
-        }
-
-        /* link */
-        var link = el.href;
-        if (link.indexOf(location.host) != -1) {
-            // Internal link
-            return;
-        }
-
-        if (link.match(/^javascript\:/i)){
-            return;
-        }
-
-        /* It's a popup if shift/ctrl/command are held or the target is _blank */
-        var popup = event.shiftKey || event.ctrlKey || event.metaKey || el.target && !el.target.match(/^_(self|parent|top)$/i);
-
-        function doClick() {
-            // Change the window location after success if not a popup
-            if (!popup) window.location.href = link;
-        }
-        ga('send', 'event', 'outbound', 'click', link, { 'hitCallback': function() {
-            doClick();
-        }});
-
-        // In case GA doesn't return, make sure the click action still happens.
-        setTimeout(doClick, 1000);
-
-        /* Prevent standard click if not a popup */
-        popup || (event.preventDefault ? event.preventDefault() : event.returnValue = !1);
-    }
-
-    /* Attach the event to all clicks in the document after page has loaded */
-    var w = window;
-    w.addEventListener ? w.addEventListener('load',function(){document.body.addEventListener('click',_gaLt,!1)},!1)
-            : w.attachEvent && w.attachEvent('onload',function(){document.body.attachEvent('onclick',_gaLt)});
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics (Optimize property) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51146623-3"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-51146623-3', {'optimize_id': 'OPT-MGXT86T'});
-    // gtag('config', 'UA-186697821-1', {'optimize_id': 'OPT-MVZCPP6'});
-</script>
-<script>
-    (() => {
-        window.tfo = window.tfo || [];
-        window.tfo.push = n => {
-            const c = g('tfo').filter(v => !v.startsWith(n.slice(0, -1)));
-            c.push(n);
-            s('tfo', c);
-        };
-        window.tfo.forEach(window.tfo.push);
-        const g = n => (document.cookie.split(';').map(v => v.trim()).find(v => v.startsWith(`${n}=`)) || '').slice(n.length + 1).split('-').filter(v => v !== '');
-        const s = (n, v) => document.cookie = n + '=' + v.join('-') + ';path=/';
-        const m = () => {
-            const c = g('tfs');
-            return g('tfo').find(n => !c.includes(n));
-        };
-        const e = () => {
-            if (m()) {
-                fetch(`/`).then(() => {
-                    if (m()) {
-                        console.error('TFO mismatch', g('tfo'), g('tfs'));
-                        s('tfo', []);
-                    }
-                });
+            /* Loop up the DOM tree through parent elements if clicked element is not a link (eg: an image inside a link) */
+            while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
+                el = el.parentNode;
             }
-        }
-        setInterval(e, 1000);
-    })();
-</script>
 
-<!-- Twitter universal website tag code -->
-<script>
-!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
-a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
-t.async=!0,t.src='../static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
-s.parentNode.insertBefore(t,s))}(window,document,'script');
-// Insert Twitter Pixel ID and Standard Event data below
-twq('init','nvf7w');
-twq('track','PageView');
-</script>
-<!-- End Twitter universal website tag code -->
+            if (!el || !el.href) {
+                return;
+            }
+
+            /* link */
+            var link = el.href;
+            if (link.indexOf(location.host) != -1) {
+                // Internal link
+                return;
+            }
+
+            if (link.match(/^javascript\:/i)) {
+                return;
+            }
+
+            /* It's a popup if shift/ctrl/command are held or the target is _blank */
+            var popup = event.shiftKey || event.ctrlKey || event.metaKey || el.target && !el.target.match(/^_(self|parent|top)$/i);
+
+            function doClick() {
+                // Change the window location after success if not a popup
+                if (!popup) window.location.href = link;
+            }
+            ga('send', 'event', 'outbound', 'click', link, {
+                'hitCallback': function() {
+                    doClick();
+                }
+            });
+
+            // In case GA doesn't return, make sure the click action still happens.
+            setTimeout(doClick, 1000);
+
+            /* Prevent standard click if not a popup */
+            popup || (event.preventDefault ? event.preventDefault() : event.returnValue = !1);
+        }
+
+        /* Attach the event to all clicks in the document after page has loaded */
+        var w = window;
+        w.addEventListener ? w.addEventListener('load', function() {
+                document.body.addEventListener('click', _gaLt, !1)
+            }, !1) :
+            w.attachEvent && w.attachEvent('onload', function() {
+                document.body.attachEvent('onclick', _gaLt)
+            });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics (Optimize property) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51146623-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-51146623-3', {
+            'optimize_id': 'OPT-MGXT86T'
+        });
+        // gtag('config', 'UA-186697821-1', {'optimize_id': 'OPT-MVZCPP6'});
+    </script>
+    <script>
+        (() => {
+            window.tfo = window.tfo || [];
+            window.tfo.push = n => {
+                const c = g('tfo').filter(v => !v.startsWith(n.slice(0, -1)));
+                c.push(n);
+                s('tfo', c);
+            };
+            window.tfo.forEach(window.tfo.push);
+            const g = n => (document.cookie.split(';').map(v => v.trim()).find(v => v.startsWith(`${n}=`)) || '').slice(n.length + 1).split('-').filter(v => v !== '');
+            const s = (n, v) => document.cookie = n + '=' + v.join('-') + ';path=/';
+            const m = () => {
+                const c = g('tfs');
+                return g('tfo').find(n => !c.includes(n));
+            };
+            const e = () => {
+                if (m()) {
+                    fetch(`/`).then(() => {
+                        if (m()) {
+                            console.error('TFO mismatch', g('tfo'), g('tfs'));
+                            s('tfo', []);
+                        }
+                    });
+                }
+            }
+            setInterval(e, 1000);
+        })();
+    </script>
+
+    <!-- Twitter universal website tag code -->
+    <script>
+        ! function(e, n, u, a) {
+            e.twq || (a = e.twq = function() {
+                    a.exe ? a.exe.apply(a, arguments) :
+                        a.queue.push(arguments);
+                }, a.version = '1', a.queue = [], t = n.createElement(u),
+                t.async = !0, t.src = '../static.ads-twitter.com/uwt.js', s = n.getElementsByTagName(u)[0],
+                s.parentNode.insertBefore(t, s))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'nvf7w');
+        twq('track', 'PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
 
     <meta charset="utf-8">
-    <base >
+    <base>
 
-        <title>Lucky Ducky 3D</title>
+    <title>Lucky Ducky 3D</title>
 
-            <meta name="description" content="Henry is cool" />
-    
-            <meta name="keywords" content="3d printing service, custom 3d printing, 3d printing" />
-    
+    <meta name="description" content="Henry is cool" />
+
+    <meta name="keywords" content="3d printing service, custom 3d printing, 3d printing" />
+
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="bundles/patweb/css/plugins.css" />
     <link rel="stylesheet" href="bundles/patweb/css/font-awesome.min.css" />
@@ -163,62 +187,66 @@ twq('track','PageView');
     <link rel="stylesheet" href="../ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 
-        <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/vendor/select.min.css" />
 
     <link rel="chrome-webstore-item" href="../chrome.google.com/webstore/detail/iocbnflhfijmepenegmoljbnhljifmch.html">
     <meta name="google-site-verification" content="vJhUAhdpe1A31cFs3qzVyZ9jgDM-YUV-ryjJ6pfqiIE" />
-            <!-- Facebook Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        '../connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '174968876357844');
-    fbq('track', 'PageView');
-</script>
-<noscript>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '174968876357844');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
     <img height="1" width="1"
          src="../www.facebook.com/tr9432.gif?id=174968876357844&amp;ev=PageView&amp;noscript=1"/>
 </noscript>
-<!-- End Facebook Pixel Code --></head>
+    <!-- End Facebook Pixel Code -->
+</head>
 
 <body class="web_home-route ">
-            <div class="header">
-    <ul class="nav"></ul>
-</div>
-<div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="1" >
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div class="header">
+        <ul class="nav"></ul>
+    </div>
+    <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="1">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Lucky Ducky 3D<sup class="sup">beta</sup></a>        </div>
-        <div class="navbar-collapse collapse">
-    <div class="right">
-        <ul class="nav navbar-nav">
-            <li>
-                <script src="https://cdn.sellix.io/static/js/embed.js"></script>
-                <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
+                <a class="navbar-brand" href="index.html">Lucky Ducky 3D<sup class="sup">beta</sup></a> </div>
+            <div class="navbar-collapse collapse">
+                <div class="right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <script src="https://cdn.sellix.io/static/js/embed.js"></script>
+                            <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet" />
 
-                            <button
-                                data-sellix-product="623e419ee338f"
-                                type="submit"
-                                alt="Buy Now with sellix.io"
-                                class="btn btn-default btn-lg"
-                                data-toggle="collapse"
-                                data-target=".reg-toggle-1"
-                            >  
+                            <button data-sellix-product="623e419ee338f" type="submit" alt="Buy Now with sellix.io" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">  
                             Order
                             </button>
-            </li>
-            <!--<li class="dropdown">
+                        </li>
+                        <!--<li class="dropdown">
                   <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                     Explore 3D Printing
                     <span class="caret"></span>
@@ -254,74 +282,44 @@ twq('track','PageView');
             <!-- <li>
                 <a href="/create/">Create</a>
             </li> -->
-                                </ul>
-        <hr class="visible-xs" />
-        <div class="navbar-right">
-                            
-                <div class="hidden-xs">
-                    <span class="toggle-buttons login-collapse collapse width in">
+                    </ul>
+                    <hr class="visible-xs" />
+                    <div class="navbar-right">
+
+                        <div class="hidden-xs">
+                            <span class="toggle-buttons login-collapse collapse width in">
                         <button
                             data-toggle="collapse"
                             type="button"
                             data-target=".login-collapse"
                             class="btn btn-default toggle-login collapsed">Login</button>
                                                                                             </span>
-                    <div class="collapse width login-form login-collapse" id="login-form">
-                        <form
-                                class="navbar-form"
-                                action="http://google.com/"
-                                method="post">
+                            <div class="collapse width login-form login-collapse" id="login-form">
+                                <form class="navbar-form" action="http://google.com/" method="post">
 
-                            <input
-                                    type="hidden"
-                                    name="_csrf_token"
-                                    value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
-                            <input
-                                    type="hidden"
-                                    name="_remember_me"
-                                    value="on" />
-                            <a class="btn btn-link"
-                            data-toggle="collapse"
-                            data-target=".login-collapse"
-                            >
-                                <span class="glyphicon glyphicon-remove-circle"></span>
-                            </a>
-                            <a
-                            class="btn btn-link"
-                            href="register/index.html">
-                                <small>Join Today</small>
-                            </a>
-                            <div class="form-group">
-                                <input
-                                        type="text"
-                                        placeholder="this doesnt work"
-                                        name="_username"
-                                        autocomplete="username"
-                                        class="form-control" />
+                                    <input type="hidden" name="_csrf_token" value="f6m9GAPTTNlxMD11kdpXlE7eQatJzFChhY7DzbR9nTQ" />
+                                    <input type="hidden" name="_remember_me" value="on" />
+                                    <a class="btn btn-link" data-toggle="collapse" data-target=".login-collapse">
+                                        <span class="glyphicon glyphicon-remove-circle"></span>
+                                    </a>
+                                    <a class="btn btn-link" href="register/index.html">
+                                        <small>Join Today</small>
+                                    </a>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="this doesnt work" name="_username" autocomplete="username" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="_password" placeholder="dont even try" autocomplete="current-password" class="form-control" />
+                                    </div>
+                                    <button type="submit" class="btn btn-default btn-submit">Sign in</button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <input
-                                        type="password"
-                                        name="_password"
-                                        placeholder="dont even try"
-                                        autocomplete="current-password"
-                                        class="form-control" />
+                        </div>
+                        <div class="visible-xs">
+                            <div class="toggle-buttons login-collapse collapse in text-right">
+                                <a data-toggle="collapse" href="#" data-target=".login-collapse" class="btn btn-default toggle-login collapsed">Login</a>
                             </div>
-                            <button
-                                    type="submit"
-                                    class="btn btn-default btn-submit">Sign in</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="visible-xs">
-                    <div class="toggle-buttons login-collapse collapse in text-right">
-                        <a
-                            data-toggle="collapse"
-                            href="#"
-                            data-target=".login-collapse"
-                            class="btn btn-default toggle-login collapsed">Login</a>
-                                                                                                </div>
-                   <!-- <div class="collapse login-form login-collapse text-right" id="login-form">
+                            <!-- <div class="collapse login-form login-collapse text-right" id="login-form">
                         <form
                                 class="navbar-form"
                                 action="https://forms.gle/qdpaSKPfC62qRAza6"
@@ -352,14 +350,14 @@ twq('track','PageView');
                                         autocomplete="current-password"
                                         class="form-control" />
                             </div>-->
-                                        <!-- <a class="btn btn-link text-danger"
+                            <!-- <a class="btn btn-link text-danger"
                             data-toggle="collapse"
                             href="#"
                             data-target=".login-collapse"
                             >
                             <small>Close</small>
                             </a> -->
-                                       <!-- <a
+                            <!-- <a
                             class="btn btn-link"
                             href="register/index.html">
                                 <small>Join Today</small>
@@ -369,260 +367,207 @@ twq('track','PageView');
                                     type="submit"
                                     class="btn btn-default btn-submit">Sign in</button>
                         </form>-->
+                        </div>
                     </div>
                 </div>
-                    </div>
-    </div>
-</div>
-    </div>
-</div>
-    
-    <div class="main">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12">
             </div>
         </div>
     </div>
+    </div>
 
-    <section class="masthead section">
-        
-        <div class="screen carousel slide" id="carousel">
-            <div class="home-title-container">
-                <h1 class="home-title-header">Lucky Ducky 3D</h1>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                </div>
             </div>
+        </div>
 
-            
+        <section class="masthead section">
 
-            <div class="images carousel-inner">
-                <figure class="img item active" style="background-image: url(bundles/patweb/img/6117-06942374c.jpg);" title="Do-it-Yourselfer">
-                    <div class="container-fluid">
-                        <figcaption class="caption">
-                            <h2>Do-it-yourselfers</h2>
+            <div class="screen carousel slide" id="carousel">
+                <div class="home-title-container">
+                    <h1 class="home-title-header">Lucky Ducky 3D</h1>
+                </div>
 
-                            <h4>Hard to find, custom designed 3D parts.</h4>
 
-                            <p>We manufacture them quickly and affordably. Just for you.</p>
 
-                            
-                            <script src="https://cdn.sellix.io/static/js/embed.js"></script>
-                            <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
+                <div class="images carousel-inner">
+                    <figure class="img item active" style="background-image: url(bundles/patweb/img/6117-06942374c.jpg);" title="Do-it-Yourselfer">
+                        <div class="container-fluid">
+                            <figcaption class="caption">
+                                <h2>Do-it-yourselfers</h2>
 
-                            <button
-                                data-sellix-product="623e419ee338f"
-                                type="submit"
-                                alt="Buy Now with sellix.io"
-                                class="btn btn-default btn-lg"
-                                data-toggle="collapse"
-                                data-target=".reg-toggle-1"
-                            >  
+                                <h4>Hard to find, custom designed 3D parts.</h4>
+
+                                <p>We manufacture them quickly and affordably. Just for you.</p>
+
+
+                                <script src="https://cdn.sellix.io/static/js/embed.js"></script>
+                                <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet" />
+
+                                <button data-sellix-product="623e419ee338f" type="submit" alt="Buy Now with sellix.io" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">  
                             Purchase a Product
                             </button>
-                            <button
-                                data-sellix-product="623e41a1aaf8c"
-                                type="submit"
-                                alt="Buy Now with sellix.io"
-                                class="btn btn-default btn-lg"
-                                data-toggle="collapse"
-                                data-target=".reg-toggle-1"
-                            >  
+                                <button data-sellix-product="623e41a1aaf8c" type="submit" alt="Buy Now with sellix.io" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">  
                             Purchase a Membership
                             </button>
-                            
-                        </figcaption>
-                    </div>
-                </figure>
 
-                <figure class="img item" style="background-image: url(bundles/patweb/img/6113-07147896c.jpg)" title="Entreprenuer group inspecting prototype">
-                    <div class="container-fluid">
-                        <figcaption class="caption">
-                            <h2>Entrepreneurs</h2>
+                            </figcaption>
+                        </div>
+                    </figure>
 
-                            <h4>It didn’t exist before you imagined it.</h4>
+                    <figure class="img item" style="background-image: url(bundles/patweb/img/6113-07147896c.jpg)" title="Entreprenuer group inspecting prototype">
+                        <div class="container-fluid">
+                            <figcaption class="caption">
+                                <h2>Entrepreneurs</h2>
 
-                            <p>Lucky Ducky 3D is your one stop shop to turn your dreams into reality.</p>
+                                <h4>It didn’t exist before you imagined it.</h4>
 
-                            <p>We offer custom 3D printing services that will fit your needs.</p>
+                                <p>Lucky Ducky 3D is your one stop shop to turn your dreams into reality.</p>
 
-                            <a href="https://forms.gle/qdpaSKPfC62qRAza6" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">Order Today</a>
-                        </figcaption>
-                    </div>
-                </figure>
+                                <p>We offer custom 3D printing services that will fit your needs.</p>
+
+                                <button data-sellix-product="623e419ee338f" type="submit" alt="Buy Now with sellix.io" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">  
+                            Purchase a Product
+                            </button>
+                                <button data-sellix-product="623e41a1aaf8c" type="submit" alt="Buy Now with sellix.io" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".reg-toggle-1">  
+                            Purchase a Membership
+                            </button>
+                            </figcaption>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="learn-more text-center">
+                    <h3>
+                        <small>Scroll Down to</small><br/> Learn More
+                    </h3>
+
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+
+                <div class="container-fluid">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                    </ol>
+                </div>
             </div>
+        </section>
 
-            <div class="learn-more text-center">
-                <h3>
-                    <small>Scroll Down to</small><br/>
-                    Learn More
-                </h3>
-
-                <span class="glyphicon glyphicon-chevron-down"></span>
-            </div>
-
+        <section class="how-it-works section noise">
             <div class="container-fluid">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                </ol>
+                <div class="screen" id="how-it-works">
+                    <h2>How It Works </h2>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <section class="how-it-works section noise">
-        <div class="container-fluid">
-            <div class="screen" id="how-it-works">
-                <h2>How It Works </h2>
-            </div>
-        </div>
+            <div class="steps">
+                <div class="item step-1 active embed-responsive embed-responsive-16by9">
+                    <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-ball.jpg" />
 
-        <div class="steps">
-            <div class="item step-1 active embed-responsive embed-responsive-16by9">
-                <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-ball.jpg"/>
-
-                <video
-                    loop
-                    muted
-                    autoplay
-                    class="video hidden-xs embed-responsive-item"
-                    placeholder="bundles/patweb/img/placeholder-ball.jpg"
-                >
+                    <video loop muted autoplay class="video hidden-xs embed-responsive-item" placeholder="bundles/patweb/img/placeholder-ball.jpg">
                     <source src="bundles/patweb/video/shutterstock_v4434986.webm" type="video/webm">
                     <source src="bundles/patweb/video/shutterstock_v4434986.mp4" type="video/mp4">
                 </video>
 
-                <h3>
-                    <strong>Step 1:</strong><br/>
-                    Make or find a 3D model<br/>
-                    of the item you want.
-                </h3>
-            </div>
+                    <h3>
+                        <strong>Step 1:</strong><br/> Make or find a 3D model<br/> of the item you want.
+                    </h3>
+                </div>
 
-            <div class="item step-2 embed-responsive embed-responsive-16by9">
-                <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-visitor.jpg"/>
+                <div class="item step-2 embed-responsive embed-responsive-16by9">
+                    <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-visitor.jpg" />
 
-                <video
-                    loop
-                    muted
-                    autoplay
-                    class="video hidden-xs embed-responsive-item"
-                    placeholder="bundles/patweb/img/placeholder-visitor.jpg"
-                >
+                    <video loop muted autoplay class="video hidden-xs embed-responsive-item" placeholder="bundles/patweb/img/placeholder-visitor.jpg">
                     <source src="bundles/patweb/video/shutterstock_v3668762.webm" type="video/webm">
                     <source src="bundles/patweb/video/shutterstock_v3668762.mp4" type="video/mp4">
                 </video>
 
-                <h3>
-                    <strong>Step 2:</strong><br/>
-                    Build your order by picking<br/>
-                    quality, priority, material, and color.
-                </h3>
-            </div>
+                    <h3>
+                        <strong>Step 2:</strong><br/> Build your order by picking<br/> quality, priority, material, and color.
+                    </h3>
+                </div>
 
-            <div class="item step-3 embed-responsive embed-responsive-16by9">
-                <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-printer.jpg"/>
+                <div class="item step-3 embed-responsive embed-responsive-16by9">
+                    <img class="visible-xs img-responsive" src="bundles/patweb/img/placeholder-printer.jpg" />
 
-                <video
-                    loop
-                    muted
-                    autoplay
-                    class="video hidden-xs embed-responsive-item"
-                    placeholder="bundles/patweb/img/placeholder-printer.jpg"
-                >
+                    <video loop muted autoplay class="video hidden-xs embed-responsive-item" placeholder="bundles/patweb/img/placeholder-printer.jpg">
                     <source src="bundles/patweb/video/shutterstock_v5106464.webm" type="video/webm">
                     <source src="bundles/patweb/video/shutterstock_v5106464.mp4" type="video/mp4">
                 </video>
 
-                <h3>
-                    <strong>Step 3:</strong><br/>
-                    We match you up<br/>
-                    with the best printer based on your needs.
-                </h3>
-            </div>
+                    <h3>
+                        <strong>Step 3:</strong><br/> We match you up<br/> with the best printer based on your needs.
+                    </h3>
+                </div>
 
-            <div class="item step-4 embed-responsive embed-responsive-16by9">
-                <img class="visible-xs img-responsive" src="bundles/patweb/img/shutterstock_v7940086.jpg" />
+                <div class="item step-4 embed-responsive embed-responsive-16by9">
+                    <img class="visible-xs img-responsive" src="bundles/patweb/img/shutterstock_v7940086.jpg" />
 
-                <video
-                    loop
-                    muted
-                    autoplay
-                    class="video hidden-xs embed-responsive-item"
-                    placeholder="bundles/patweb/img/shutterstock_v7940086.jpg"
-                >
+                    <video loop muted autoplay class="video hidden-xs embed-responsive-item" placeholder="bundles/patweb/img/shutterstock_v7940086.jpg">
                     <source src="bundles/patweb/video/shutterstock_v7940086.webm" type="video/webm">
                     <source src="bundles/patweb/video/shutterstock_v7940086.mp4" type="video/mp4">
                 </video>
 
-                <h3>
-                    <strong>Step 4:</strong><br/>
-                    Your print is delivered<br/>
-                    to your doorstep or in person, hassle free.
-                </h3>
-            </div>
-        </div>
-    </section>
-
-    <a name="supplier"></a>
-
-    <section class="section callout supplier-callout">
-        <div class="container-fluid">
-            <div class="col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1 text-center">
-                <h2 class="h2">
-                    About Us<br/>
-
-                    
-                </h2>
-
-                <p>
-                    Russell: CEO, pays to win because has 3d printer <br>
-                    Michael: Head of Sales, works to win<br>
-                    Henry: Head Developer, being cool to win
-                </p>
-
-                <p>
-                    At Lucky Ducky 3D we are on a mission to democratize 3D printing and make it available to everyone.
-                    Join us and turn your printer and your passion into a money making business.
-                    We do all the calculations for you.
-                    All you have to do is select the job you want from a list of jobs and follow our instructions on how to print and mail the items.
-                </p>
-
-                <button
-                                data-sellix-product="623e419ee338f"
-                                type="submit"
-                                alt="Buy Now with sellix.io"
-                                class="btn btn-xl btn-default"
-                                data-toggle="collapse"
-                                data-target=".reg-toggle-1"
-                            >  
-                            Order Now
-                            </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="our-story section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <h2 class="h2">Our Philosophy.</h2>
-
-                    <p>
-                        We want to change the world for the better through technology, and we see democratized 3d printing as a way to do it.
-                        When anyone can make completely unique physical objects at a reasonable price, without having the money or technical skills to own and operate a 3d printer of their own, a whole new creative energy will be released throughout the world.
-                        We built Lucky Ducky 3D in the hopes that it would be a positive force for startups, do-it-yourselfers and creative spirits everywhere.
-                    </p>
+                    <h3>
+                        <strong>Step 4:</strong><br/> Your print is delivered<br/> to your doorstep or in person, hassle free.
+                    </h3>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
 
-            
-<footer class="footer hidden-print">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <!--
+        <a name="supplier"></a>
+
+        <section class="section callout supplier-callout">
+            <div class="container-fluid">
+                <div class="col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1 text-center">
+                    <h2 class="h2">
+                        About Us<br/>
+
+
+                    </h2>
+
+                    <p>
+                        Russell: CEO, pays to win because has 3d printer <br> Michael: Head of Sales, works to win<br> Henry: Head Developer, being cool to win
+                    </p>
+
+                    <p>
+                        At Lucky Ducky 3D we are on a mission to democratize 3D printing and make it available to everyone. Join us and turn your printer and your passion into a money making business. We do all the calculations for you. All you have to do is select the job you
+                        want from a list of jobs and follow our instructions on how to print and mail the items.
+                    </p>
+
+                    <button data-sellix-product="623e419ee338f" type="submit" alt="Buy Now with sellix.io" class="btn btn-xl btn-default" data-toggle="collapse" data-target=".reg-toggle-1">  
+                            Order Now
+                            </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-story section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <h2 class="h2">Our Philosophy.</h2>
+
+                        <p>
+                            We want to change the world for the better through technology, and we see democratized 3d printing as a way to do it. When anyone can make completely unique physical objects at a reasonable price, without having the money or technical skills to own and
+                            operate a 3d printer of their own, a whole new creative energy will be released throughout the world. We built Lucky Ducky 3D in the hopes that it would be a positive force for startups, do-it-yourselfers and creative spirits
+                            everywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="footer hidden-print">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <!--
 <div class="text-center">
 	<div class="panel panel-default call-widget">
 		Questions?
@@ -635,62 +580,96 @@ twq('track','PageView');
 	</div>
 </div>
 -->
-                <ul class="nav nav-pills footer-nav">
-                    <li>
-                        <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">About Us</a>
-                    </li>
+                    <ul class="nav nav-pills footer-nav">
+                        <li>
+                            <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">About Us</a>
+                        </li>
 
-                    <li>
-                        <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Terms of Service</a>
-                    </li>
+                        <li>
+                            <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Terms of Service</a>
+                        </li>
 
-                    <li>
-                        <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Privacy Policy</a>
-                    </li>
+                        <li>
+                            <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Privacy Policy</a>
+                        </li>
 
-                    <li>
-                        <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Contact</a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href="https://forms.gle/qdpaSKPfC62qRAza6" target="_self">Contact</a>
+                        </li>
+                    </ul>
 
-                <p class="list-unstyled mt-3 mb-5">
-                    <a href="https://forms.gle/qdpaSKPfC62qRAza6">Los Altos CA 3D Printing</a>
-                    &bull;
-                    <a href="https://forms.gle/qdpaSKPfC62qRAza6">Black Sea 3D Printing</a>
-                    &bull;
-                    <a href="https://forms.gle/qdpaSKPfC62qRAza6">Queensland Antarctica 3D Printing</a>
-                    &bull;
-                    <a href="https://forms.gle/qdpaSKPfC62qRAza6">Atlantic Ocean 3D Printing</a>
-                    &bull;
-                    <a href="https://forms.gle/qdpaSKPfC62qRAza6">Bermuda Triangle 3D Printing</a>
-                </p>
+                    <p class="list-unstyled mt-3 mb-5">
+                        <a href="https://forms.gle/qdpaSKPfC62qRAza6">Los Altos CA 3D Printing</a> &bull;
+                        <a href="https://forms.gle/qdpaSKPfC62qRAza6">Black Sea 3D Printing</a> &bull;
+                        <a href="https://forms.gle/qdpaSKPfC62qRAza6">Queensland Antarctica 3D Printing</a> &bull;
+                        <a href="https://forms.gle/qdpaSKPfC62qRAza6">Atlantic Ocean 3D Printing</a> &bull;
+                        <a href="https://forms.gle/qdpaSKPfC62qRAza6">Bermuda Triangle 3D Printing</a>
+                    </p>
 
-                <p class="footer-brand mb-0">
-                    &copy; 2022 Lucky Ducky 3D. HENRY IS COOOOOOOOL
-                </p>
+                    <p class="footer-brand mb-0">
+                        &copy; 2022 Lucky Ducky 3D. HENRY IS COOOOOOOOL
+                    </p>
 
-                                <div id="random-id"></div>
+                    <div id="random-id"></div>
 
-                <script>
-                    if (typeof randomId !== 'undefined') document.getElementById('random-id').appendChild(document.createTextNode(randomId));
-                </script>
+                    <script>
+                        if (typeof randomId !== 'undefined') document.getElementById('random-id').appendChild(document.createTextNode(randomId));
+                    </script>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-    
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBW27QarrVgVCW6qCXZwNCkXx7IFvqEymk&amp;libraries=places"></script>
+    </footer>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBW27QarrVgVCW6qCXZwNCkXx7IFvqEymk&amp;libraries=places"></script>
     <script src="js/bundleae24.js?v=14"></script>
     <script src="bundles/fosjsrouting/js/router.js"></script>
     <script src="js/routing87ba?callback=fos.Router.setData"></script>
 
     <script>
         angular.module('app')
-            .value('config', {"batchArchiveDownloadUrl":"https:\/\/printathing.com\/batchDownload","vapidPublicKey":"BB1QFJanriv5wKmQB0q1xR3HpbnvoATxIA0EuwGGqNQNl780f2PFouLxWYk4eLglEqS6wFqxYq3LaCPXoQaNk5A"})
-            .value('factors', {"thingiverse_link":"_no","dummy_test":"_a","3d_preview":"_yes","maker_image":"_guyCheckeredShirt","maker_num_materials":"_18","maker_garuntee":"_supplierImprove","maker_ease":"_yes","maker_value":"_yes","maker_call_to_action_color":"_green","maker_call_to_action_text":"startYour3DPrint","maker_trust_logo":"_yes","maker_top_navigation":"no","maker_testimonials":"no","maker_how_works":"no","maker_featured_by":"no","royalty_hero_image":"designersTeam","royalty_top_navigation":"_yes","royalty_hey_designers_headline":"designShareProfit","royalty_cta_text":"_startEarning","royalty_price_slide_2":"minimal","turn_around_max_days":"_14","maker_image_same_day_test":"_clockFrontCloseHand","maker_headline_and_subtext_not_same_day":"_best3DProject","maker_headline_same_day":"iterateQuickly","default_material":"white","maker_headline_and_subtext_two_week":"whatsBettter","thingiverse_next_day_delivery":"_no","kisslicer_double_time":"_0","beta_logo":"_yes","show_delivery_time_quote_2":"_no","tv_printability_warning":"yes","order_minimum":"0","shipping_charge":"14","config_charge":"8","material_price":"1.4"})
-        ;
+            .value('config', {
+                "batchArchiveDownloadUrl": "https:\/\/printathing.com\/batchDownload",
+                "vapidPublicKey": "BB1QFJanriv5wKmQB0q1xR3HpbnvoATxIA0EuwGGqNQNl780f2PFouLxWYk4eLglEqS6wFqxYq3LaCPXoQaNk5A"
+            })
+            .value('factors', {
+                "thingiverse_link": "_no",
+                "dummy_test": "_a",
+                "3d_preview": "_yes",
+                "maker_image": "_guyCheckeredShirt",
+                "maker_num_materials": "_18",
+                "maker_garuntee": "_supplierImprove",
+                "maker_ease": "_yes",
+                "maker_value": "_yes",
+                "maker_call_to_action_color": "_green",
+                "maker_call_to_action_text": "startYour3DPrint",
+                "maker_trust_logo": "_yes",
+                "maker_top_navigation": "no",
+                "maker_testimonials": "no",
+                "maker_how_works": "no",
+                "maker_featured_by": "no",
+                "royalty_hero_image": "designersTeam",
+                "royalty_top_navigation": "_yes",
+                "royalty_hey_designers_headline": "designShareProfit",
+                "royalty_cta_text": "_startEarning",
+                "royalty_price_slide_2": "minimal",
+                "turn_around_max_days": "_14",
+                "maker_image_same_day_test": "_clockFrontCloseHand",
+                "maker_headline_and_subtext_not_same_day": "_best3DProject",
+                "maker_headline_same_day": "iterateQuickly",
+                "default_material": "white",
+                "maker_headline_and_subtext_two_week": "whatsBettter",
+                "thingiverse_next_day_delivery": "_no",
+                "kisslicer_double_time": "_0",
+                "beta_logo": "_yes",
+                "show_delivery_time_quote_2": "_no",
+                "tv_printability_warning": "yes",
+                "order_minimum": "0",
+                "shipping_charge": "14",
+                "config_charge": "8",
+                "material_price": "1.4"
+            });
     </script>
-        <script src ="bundles/patweb/js/home.js"></script>
+    <script src="bundles/patweb/js/home.js"></script>
 
     <script>
         const param = new URL(window.location.html).searchParams.get('s');
@@ -706,19 +685,31 @@ twq('track','PageView');
                     window.location.pathname + window.location.search.replace(new RegExp(`s=${param}&?`), '')
                 );
                 ga('set', 'campaignSource', 'code_name');
-                const campaignMedium = ({'_o': 'email', '_a': 'shared_link'})[matches.groups['medium']] || 'unknown';
+                const campaignMedium = ({
+                    '_o': 'email',
+                    '_a': 'shared_link'
+                })[matches.groups['medium']] || 'unknown';
                 ga('set', 'campaignMedium', campaignMedium);
-                const campaignName = ({'_o': 'order_confirmation', '_a': 'auction'})[matches.groups['medium']] || 'unknown';
+                const campaignName = ({
+                    '_o': 'order_confirmation',
+                    '_a': 'auction'
+                })[matches.groups['medium']] || 'unknown';
                 ga('set', 'campaignName', campaignName);
                 ga('set', 'campaignContent', codeName);
                 ga('send', 'event', 'auction-supplier-link', 'follow', campaignMedium + '-' + campaignName);
 
-                fetch(`/api/v1/supplier-link/${codeName}/followed`, {method: "POST"})
+                fetch(`/api/v1/supplier-link/${codeName}/followed`, {
+                    method: "POST"
+                })
                 if (previousCodeName !== codeName) {
                     if (previousCodeName) {
-                        fetch(`/api/v1/supplier-link/${previousCodeName}/removed`, {method: "POST"})
+                        fetch(`/api/v1/supplier-link/${previousCodeName}/removed`, {
+                            method: "POST"
+                        })
                     }
-                    fetch(`/api/v1/supplier-link/${codeName}/assigned`, {method: "POST"})
+                    fetch(`/api/v1/supplier-link/${codeName}/assigned`, {
+                        method: "POST"
+                    })
                 }
             }
         }
@@ -726,4 +717,5 @@ twq('track','PageView');
 </body>
 
 <!-- Mirrored from printathing.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Mar 2022 02:54:27 GMT -->
+
 </html>
